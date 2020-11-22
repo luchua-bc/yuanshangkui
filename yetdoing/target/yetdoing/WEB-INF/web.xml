@@ -1,0 +1,72 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+
+  <filter>
+    <filter-name>character-filter</filter-name>
+    <filter-class>com.yuansk.filter.CharacterEncodeFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>character-filter</filter-name>
+    <url-pattern>/yetdoing/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>post-head-image</servlet-name>
+    <servlet-class>com.yuansk.servlet.postUserHeadImageServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>get-head-image</servlet-name>
+    <servlet-class>com.yuansk.servlet.getUserHeadImageServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>check-phone-number</servlet-name>
+    <servlet-class>com.yuansk.servlet.CheckPhoneNumberServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>submit-user-information</servlet-name>
+    <servlet-class>com.yuansk.servlet.submitUserInformationServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>user-login</servlet-name>
+    <servlet-class>com.yuansk.servlet.userLoginServlet</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>check-phone-number</servlet-name>
+    <url-pattern>/register/check</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>submit-user-information</servlet-name>
+    <url-pattern>/register/submit</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>user-login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>get-head-image</servlet-name>
+    <url-pattern>/image/get</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>post-head-image</servlet-name>
+    <url-pattern>/image/post</url-pattern>
+  </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,23 @@
+
+http://39.106.125.134:80/yetdoing/image/get?headImageName=default
+
+检查手机号是否注册
+http://localhost:8080/yetdoing/register/check?phoneNumber=
+
+提交注册信息
+http://localhost:8080/yetdoing/register/submit
+
+登录
+http://localhost:8080/yetdoing/login
+
+获取头像
+http://localhost:8080/yetdoing/image/get?headImageName=
+
+更换头像
+http://localhost:8080/yetdoing/image/post
+
+@Multipart
+    @POST("/yetdoing/image/post")
+    Call<ResponseBody> upload(@Qeury("phoneNumber") String phoneNumber, @Part MultipartBody.Part part);
+
+    skipMemoryCache
